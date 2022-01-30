@@ -26,6 +26,8 @@ if __name__ == "__main__":
 
     # :CURVE separates preamble from binary values
     exp_split = re.compile(b":CURVE #")
+    if exp_split.search(text) == None:
+        raise IOError("Could not find :CURVE, invalid ISF file")
     splitted = exp_split.split(text)
     # Save preamble and convert it to ASCII text
     preamble = splitted[0].decode('ascii')
