@@ -1,3 +1,8 @@
+# Tektronik files and images
+*.isf
+*.png
+*.set
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
